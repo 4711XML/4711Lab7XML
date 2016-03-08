@@ -1,0 +1,10 @@
+<course coursecode = "COMP4711">
+	<class coursecode = "COMP4711" day = "tuesday" starttime="130" endtime="230">
+		<room>SW5-1840</room>
+		<instructor>Jim Parry</instructor>            
+	</class>  
+	<class coursecode = "COMP4711" day = "thursday" starttime="330" endtime="530">
+		<room>SW5-1850</room>
+		<instructor>Jim Parry</instructor>            
+	</class>
+</course>
