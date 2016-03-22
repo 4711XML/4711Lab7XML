@@ -1,10 +1,19 @@
-<dayofweek day = "friday">
-	<class coursecode = "BLAW3600" day = "friday" starttime = "0830" endtime = "1030">
-		<room>SW5-1840</room>
-		<instructor>Catherine Ryan</instructor>
-	</class>
-	<class coursecode = "COMP4560" day = "friday" starttime = "1230" endtime = "1330">
-		<room>SW3-1750</room>
-		<instructor>Brenda Fine</instructor>
-	</class>
-</dayofweek>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE days SYSTEM "Timetable.dtd">
+<days>
+    <day type="monday">
+        <booking instructor="Dennis Richards" room="SE12 308" type="DennisTime" time="830" name="COMP 4932"/>
+        <booking instructor="Mirela Gutica" room="SW1 1205" type="Lecture" time="1130" name="COMP 4735"/>
+        <booking instructor="Dennis Richards" room="SE12 308" type="DennisTime" time="1430" name="COMP 4995"/>
+    </day>
+    <day type="tuesday">
+        <booking instructor="Brenda Fine" room="SE12 320" type="Lab" time="930" name="COMP 4560"/>
+        <booking instructor="Brenda Fine" room="SW5 1850" type="Lecture" time="1130" name="COMP 4560"/>
+        <booking instructor="James Parry" room="SW5 1840" type="Lecture" time="1430" name="COMP 4711"/>
+        <booking instructor="Dennis Richards" room="SE12 308" type="DennisTime" time="1530" name="COMP 4932"/>
+    </day>
+    <day type="friday">
+        <booking instructor="Catherine Ryan" room="SW5 1840" type="Lecture" time="830" name="BLAW 3600"/>
+        <booking instructor="Brenda Fine" room="SW3 1750" type="Lecture" time="1230" name="COMP 4560"/>
+    </day>
+</days>
