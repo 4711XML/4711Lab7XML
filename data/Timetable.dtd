@@ -2,35 +2,39 @@
 
 <!-- timetable is the root element of a timetable xml file.  
 A timetable is presented by day of the week, time slot, course -->
-<!ELEMENT timetable (dayofweek | timeslot | course)+>
+<!ELEMENT schedule (days, periods, courses) >
+<!ATTLIST schedule
+    set  CDATA #REQUIRED
+    term CDATA #REQUIRED
+>
 <!-- A container collects classes for a particular day. -->
-<!ELEMENT dayofweek (class*)>
-<!-- The enumerated attribute day to specify which day is represented. -->
-<!ATTLIST dayofweek
-    day ( monday | tuesday | wednesday | thursday | friday ) #REQUIRED
+<!ELEMENT days (day)* >
+<!ELEMENT day (booking)* >
+<!ATTLIST day
+    type (monday|tuesday|wednesday|thursday|friday) #REQUIRED
 >
+
 <!-- A container to hold classes for a particular course. -->
-<!ELEMENT course (class+)>
-<!-- The enumerated attribute "coursecode" to specify which course to examine. -->
+<!ELEMENT courses (course)* >
+<!ELEMENT course (booking)* >
 <!ATTLIST course
-    coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP4711 | COMP4955) #REQUIRED
+    code CDATA #REQUIRED
 >
+
 <!-- A container to collect classes in a particular time slot. -->
-<!ELEMENT timeslot (class*)>
-<!-- Enumerated attributes of a time slot -->
-<!ATTLIST timeslot
-    time (0830 | 0930 | 1030 | 1130 | 1230 | 1330 | 1430 | 1530 | 1630 | 1730) #REQUIRED
+<!ELEMENT periods (period)* >
+<!ELEMENT period  (booking)* >
+<!ATTLIST period
+    time (830|930|1030|1130|1230|1330|1430|1530|1630) #REQUIRED
 >
+
 <!-- A timetable entry describing a particular class. -->
-<!ELEMENT class (room, instructor)>
-<!-- Enumarated attributes of a class-->
-<!ATTLIST class
-    starttime ( 0830 | 0930 | 1030 | 1130 | 1230 | 1330 | 1430 | 1530 | 1630) #REQUIRED
-    endtime ( 0930 | 1030 | 1130 | 1230 | 1330 | 1430 | 1530 | 1630 | 1730) #REQUIRED
-	coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP4711 | COMP4955) #REQUIRED
-    day (monday | tuesday | wednesday | thursday | friday) #REQUIRED
+<!ELEMENT booking EMPTY >
+<!ATTLIST booking
+        time       (830|930|1030|1130|1230|1330|1430|1530|1630) #IMPLIED
+        day        (monday|tuesday|wednesday|thursday|friday)   #IMPLIED
+        course     CDATA                                        #IMPLIED
+        instructor CDATA                                        #REQUIRED
+        room       CDATA                                        #REQUIRED
+        type       CDATA                                        #REQUIRED
 >
-<!-- The instructor for a particular class. -->
-<!ELEMENT instructor (#PCDATA)>
-<!-- The room a class takes place in. -->
-<!ELEMENT room (#PCDATA)>
