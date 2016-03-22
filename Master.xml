@@ -2,11 +2,11 @@
 
 <timetable>
 <course coursecode = "COMP4711">
-	<class coursecode = "COMP4711" day = "tuesday" starttime="130" endtime="230">
+	<class coursecode = "COMP4711" day = "tuesday" starttime="1330" endtime="1430">
 		<room>SW5-1840</room>
 		<instructor>Jim Parry</instructor>            
 	</class>  
-	<class coursecode = "COMP4711" day = "thursday" starttime="330" endtime="530">
+	<class coursecode = "COMP4711" day = "thursday" starttime="1530" endtime="1730">
 		<room>SW5-1850</room>
 		<instructor>Jim Parry</instructor>            
 	</class>
@@ -44,11 +44,11 @@
 	</class>
 </timeslot>
 <dayofweek day = "friday">
-	<class coursecode = "BLAW3600" day = "friday" starttime = "830" endtime = "1030">
+	<class coursecode = "BLAW3600" day = "friday" starttime = "0830" endtime = "1030">
 		<room>SW5-1840</room>
 		<instructor>Catherine Ryan</instructor>
 	</class>
-	<class coursecode = "COMP4560" day = "friday" starttime = "1230" endtime = "130">
+	<class coursecode = "COMP4560" day = "friday" starttime = "1230" endtime = "1330">
 		<room>SW3-1750</room>
 		<instructor>Brenda Fine</instructor>
 	</class>
