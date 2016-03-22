@@ -13,7 +13,7 @@ A timetable is presented by day of the week, time slot, course -->
 <!ELEMENT course (class+)>
 <!-- The enumerated attribute "coursecode" to specify which course to examine. -->
 <!ATTLIST course
-    coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP49711 | COMP4955) #REQUIRED
+    coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP4711 | COMP4955) #REQUIRED
 >
 <!-- A container to collect classes in a particular time slot. -->
 <!ELEMENT timeslot (class*)>
@@ -27,7 +27,7 @@ A timetable is presented by day of the week, time slot, course -->
 <!ATTLIST class
     starttime ( 0830 | 0930 | 1030 | 1130 | 1230 | 1330 | 1430 | 1530 | 1630) #REQUIRED
     endtime ( 0930 | 1030 | 1130 | 1230 | 1330 | 1430 | 1530 | 1630 | 1730) #REQUIRED
-	coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP49711 | COMP4955) #REQUIRED
+	coursecode (BLAW3600 | COMP4735 | COMP4560 | COMP4932 | COMP4711 | COMP4955) #REQUIRED
     day (monday | tuesday | wednesday | thursday | friday) #REQUIRED
 >
 <!-- The instructor for a particular class. -->
