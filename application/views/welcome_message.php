@@ -23,6 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		background-color: transparent;
 		font-weight: normal;
 	}
+	
+	.third {
+            width: 33%;
+            height: 100vh;
+            float: left;
+            text-align: center;
+            padding-bottom: 5px;
+        }
 
 	h1 {
 		color: #444;
@@ -68,21 +76,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <div id="container">
-	<h1>Welcome to CodeIgniter!</h1>
+    <div id="body">
 
-	<div id="body">
-		<p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
+        <div class="third">
+        <h1>Days</h1>
+        {days}
+            {day}
+            <br>
+            {booking}
+                {instructor}
+                {room}
+                {type}
+                {time}
+                {name}
+                <br>
+            {/booking}
+        <br>
+        {/days}
+        </div>
 
-		<p>If you would like to edit this page you'll find it located at:</p>
-		<code>application/views/welcome_message.php</code>
+        <div class="third">
+        <h1>Periods</h1>
+    	{periods}
+            {time}
+            <br>
+            {booking}
+                {instructor}
+                {room}
+                {type}
+                {day}
+                {name}
+                <br>
+            {/booking}
+            <br>
+        {/periods}
+        </div>
 
-		<p>The corresponding controller for this page is found at:</p>
-		<code>application/controllers/Welcome.php</code>
+        <div class="third">
+        <h1>Courses</h1>
+        {courses}
+            {code}
+            <br>
+            {booking}
+	            {instructor}
+	            {room}
+	            {type}
+	            {time}
+	            {day}
+	            <br>
+            {/booking}
+            <br>
+        {/courses}
+        </div>
 
-		<p>If you are exploring CodeIgniter for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
-	</div>
-
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+    </div>
 </div>
 
 </body>
